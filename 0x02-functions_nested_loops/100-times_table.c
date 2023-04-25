@@ -2,42 +2,43 @@
 
 /**
  * main - Entry point
- * times_table - check description
- * Description: It prints 9 times table starting with 0
- * Return: Nothing.
+ * print_times_table - Prints the times table of the input,
+ * starting with 0.
+ * @n: The value of the times table to be printed.
  */
 
-void times_table(void)
+void print_times_table(int n)
+
 {
-	int i, j, n;
+	int num, mult, prod;
 
-	for (i = 0; i <= 9; i++)
+	if (n >= 0 && n <= 15)
 	{
-		for (j = 0; j <= 9; j++)
-		{
-			n = i * j;
-
-			if ((n / 10) == 0)
-			{
-				if (j != 0)
-					_putchar(' ');
-				_putchar(n + '0');
-
-				if (j == 9)
-					continue;
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				if (j == 9)
-					continue;
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
-		_putchar('\n');
+	for (num = 0; num <= n; num++)
+	{
+	_putchar('0');
+	for (mult = 1; mult <= n; mult++)
+	{
+	_putchar(',');
+	_putchar(' ');
+	prod = num * mult;
+	if (prod <= 99)
+	_putchar(' ');
+	if (prod <= 9)
+	_putchar(' ');
+	if (prod >= 100)
+	{
+	_putchar((prod / 100) + '0');
+	_putchar(((prod / 10)) % 10 + '0');
+	}
+	else if (prod <= 99 && prod >= 10)
+	{
+	_putchar((prod / 10) + '0');
+	}
+	_putchar((prod % 10) + '0');
+	}
+	_putchar('\n');
+	}
 	}
 }
+
