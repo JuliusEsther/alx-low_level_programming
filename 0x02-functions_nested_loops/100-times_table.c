@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * print_times_table - Prints the times table of the input,
- * starting with 0.
+ * times_table - check decription
+ * Description: It prints 100 times table starting with 0.
  * @n: The value of the times table to be printed.
+ * Return: Always 0 (success)
  */
 
 void print_times_table(int n)
