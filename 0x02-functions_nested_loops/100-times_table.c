@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- *main - Entry point
- *
- *Description: 'It prints 100 times table starting with 0'
+ *Print_times_tables - Prints the time table of the input,
+ *starting with 0.
  *@n: The value of the times table to be printed.
  *
  *Return: Always 0 (Success)
