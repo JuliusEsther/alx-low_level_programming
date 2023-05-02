@@ -5,7 +5,7 @@
 *@str: string to print
 */
 
-int void_puts(char *str)
+void _puts(char *str)
 
 {
 
