@@ -74,3 +74,8 @@ char **strtow(char *str)
 		else if (x++ == 0)
 			start = n;
 	}
+	matrix[k] = NULL;
+
+	return (matrix);
+}
+
