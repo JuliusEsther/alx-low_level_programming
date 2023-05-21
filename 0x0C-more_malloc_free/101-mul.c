@@ -1,12 +1,11 @@
-#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#define ERR_MSG "Error"
 /**
  * is_digit - checks if a string contains a non-digit char
  * @s: string to be evaluated
  *
- *Return: 0 if a non-digit is found, 1 otherwise
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
 int is_digit(char *s)
 {
@@ -20,7 +19,6 @@ int is_digit(char *s)
 	}
 	return (1);
 }
-
 /**
  * _strlen - returns the length of a string
  * @s: string to evaluate
@@ -37,7 +35,6 @@ int _strlen(char *s)
 	}
 	return (i);
 }
-
 /**
  * errors - handles errors for main
  */
@@ -46,8 +43,7 @@ void errors(void)
 	printf("Error\n");
 	exit(98);
 }
-
- /**
+/**
  * main - multiplies two positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
@@ -60,6 +56,7 @@ int main(int argc, char *argv[])
 	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
+
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
 	len1 = _strlen(s1);
@@ -89,11 +86,12 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-			_putchar(result[i] + '0');
+			putchar(result[i] + '0');
 	}
 	if (!a)
-		_putchar('0');
-	_putchar('\n');
+		putchar('0');
+	putchar('\n');
 	free(result);
+
 	return (0);
 }
