@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * add_node_end - adds a new node at the end of a linked list
+ * Add_node_end - adds a new node at the end of a linked list
  * @head: double pointer to the list_t list
  * @str: string to put in the new node
  *
@@ -32,7 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	return (new);
 }
 
-while (temp->next)
+	while (temp->next)
 	temp = temp->next;
 
 	temp->next = new;
